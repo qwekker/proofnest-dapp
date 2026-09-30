@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: proofnest-dapp
+    runtime: static
+    staticPublishPath: ./public
+    buildCommand: ""
