@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="actions.css" />
   </head>
   <body>
     <main class="app-shell">
@@ -40,6 +41,20 @@
           <li><b>Write</b><p>Turn a goal, note, or agreement into a clear statement.</p></li>
           <li><b>Sign</b><p>Your wallet creates a cryptographic proof tied to the moment.</p></li>
         </ol>
+      </section>
+
+      <section class="card wallet-actions" aria-labelledby="actionsTitle">
+        <div class="section-label"><span>03</span><h2 id="actionsTitle">Move ETH</h2></div>
+        <p class="action-intro">Send ETH from your connected wallet. You review the final address and amount in your wallet before anything is sent.</p>
+        <div class="action-tabs" role="tablist"><button class="action-tab active" type="button" data-action="deposit">Deposit</button><button class="action-tab" type="button" data-action="transfer">Transfer</button></div>
+        <form id="moneyForm">
+          <label id="recipientLabel" for="recipient">Deposit address</label>
+          <input id="recipient" autocomplete="off" placeholder="0x… receiving wallet address" maxlength="42" />
+          <label for="amount">Amount (ETH)</label>
+          <input id="amount" inputmode="decimal" autocomplete="off" placeholder="0.01" />
+          <button id="moneyButton" class="primary-button" type="submit" disabled>Deposit ETH <span>↗</span></button>
+        </form>
+        <p class="fine-print">Use an address you trust. Transactions are irreversible after wallet confirmation; network fees may apply.</p>
       </section>
 
       <section class="records" aria-labelledby="recordsTitle">
