@@ -44,12 +44,12 @@
       </section>
 
       <section class="card wallet-actions" aria-labelledby="actionsTitle">
-        <div class="section-label"><span>03</span><h2 id="actionsTitle">Move ETH</h2></div>
-        <p class="action-intro">Send ETH from your connected wallet. You review the final address and amount in your wallet before anything is sent.</p>
-        <div class="action-tabs" role="tablist"><button class="action-tab active" type="button" data-action="deposit">Deposit</button><button class="action-tab" type="button" data-action="transfer">Transfer</button></div>
+        <div class="section-label"><span>03</span><h2 id="actionsTitle">Vault</h2></div>
+        <p class="action-intro">Your balance is stored in the ProofNest Vault on Sepolia. Every action is confirmed by your wallet.</p>
+        <div class="vault-balance"><span>VAULT BALANCE</span><strong id="vaultBalance">Connect wallet</strong><small>Sepolia testnet</small></div>
+        <div class="action-tabs" role="tablist"><button class="action-tab active" type="button" data-action="deposit">Deposit</button><button class="action-tab" type="button" data-action="transfer">Transfer</button><button class="action-tab" type="button" data-action="withdraw">Withdraw</button></div>
         <form id="moneyForm">
-          <label id="recipientLabel" for="recipient">Deposit address</label>
-          <input id="recipient" autocomplete="off" placeholder="0x… receiving wallet address" maxlength="42" />
+          <div id="recipientGroup"><label id="recipientLabel" for="recipient">Vault recipient</label><input id="recipient" autocomplete="off" placeholder="0x… recipient wallet address" maxlength="42" /></div>
           <label for="amount">Amount (ETH)</label>
           <input id="amount" inputmode="decimal" autocomplete="off" placeholder="0.01" />
           <button id="moneyButton" class="primary-button" type="submit" disabled>Deposit ETH <span>↗</span></button>
